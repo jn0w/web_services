@@ -6,8 +6,8 @@ pipeline {
         DOCKER_IMAGE = 'inventory-api'
         CONTAINER_NAME = 'inventory-api-container'
         // these two come from Jenkins credentials (Secret text)
-        MONGO_URI = credentials('mongo-uri')
-        EXCHANGE_RATE_API_KEY = credentials('exchange-rate-api-key')
+        MONGO_URI = credentials('MONGO_URI')
+        EXCHANGE_RATE_API_KEY = credentials('EXCHANGE_RATE_API_KEY')
     }
 
     stages {
