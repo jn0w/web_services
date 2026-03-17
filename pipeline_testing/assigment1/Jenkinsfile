@@ -3,20 +3,14 @@ pipeline {
 
     // credentials used by this pipeline
     environment {
-        MONGO_URI = credentials('mongo-uri')
-        EXCHANGE_RATE_API_KEY = credentials('exchange-rate-api-key')
         DOCKER_IMAGE = 'inventory-api'
         CONTAINER_NAME = 'inventory-api-container'
+        // these two come from Jenkins credentials (Secret text)
+        MONGO_URI = credentials('mongo-uri')
+        EXCHANGE_RATE_API_KEY = credentials('exchange-rate-api-key')
     }
 
     stages {
-
-        // grab the code
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/jn0w/web_services'
-            }
-        }
 
         // build the docker image
         stage('Build Docker Image') {
@@ -145,8 +139,8 @@ READMEEOF
     // cleanup if something goes wrong
     post {
         always {
-            sh "docker stop ${CONTAINER_NAME} || true"
-            sh "docker rm ${CONTAINER_NAME} || true"
+            sh 'docker stop inventory-api-container || true'
+            sh 'docker rm inventory-api-container || true'
         }
         success {
             archiveArtifacts artifacts: 'complete-*.zip', fingerprint: true
