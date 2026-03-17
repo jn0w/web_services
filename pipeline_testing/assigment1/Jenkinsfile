@@ -1,13 +1,12 @@
 pipeline {
     agent any
 
-    // credentials used by this pipeline
     environment {
         DOCKER_IMAGE = 'inventory-api'
         CONTAINER_NAME = 'inventory-api-container'
-        // these two come from Jenkins credentials (Secret text)
         MONGO_URI = credentials('MONGO_URI')
         EXCHANGE_RATE_API_KEY = credentials('EXCHANGE_RATE_API_KEY')
+        PATH = "/usr/local/bin:${env.PATH}"
     }
 
     stages {
@@ -15,7 +14,9 @@ pipeline {
         // build the docker image
         stage('Build Docker Image') {
             steps {
-                sh "docker build -t ${DOCKER_IMAGE} ."
+                dir('pipeline_testing/assigment1') {
+                    sh "docker build -t ${DOCKER_IMAGE} ."
+                }
             }
         }
 
@@ -29,7 +30,6 @@ pipeline {
                         -p 8000:8000 \
                         ${DOCKER_IMAGE}
                 """
-                // quick pause so the api can boot
                 sh 'sleep 10'
             }
         }
@@ -37,7 +37,9 @@ pipeline {
         // run the postman checks
         stage('Run Newman Tests') {
             steps {
-                sh 'newman run postman/inventory_api.postman_collection.json --env-var "base_url=http://localhost:8000"'
+                dir('pipeline_testing/assigment1') {
+                    sh 'newman run postman/inventory_api.postman_collection.json --env-var "base_url=http://localhost:8000"'
+                }
             }
         }
 
@@ -56,11 +58,12 @@ pipeline {
             }
         }
 
-        // write a simple README.txt for the submission
+        // write the README
         stage('Generate README') {
             steps {
-                sh '''
-                    cat > README.txt << 'READMEEOF'
+                dir('pipeline_testing/assigment1') {
+                    sh '''
+                        cat > README.txt << 'READMEEOF'
 Inventory API - Endpoint Reference
 ===================================
 
@@ -113,38 +116,41 @@ Interactive API Documentation:
 
 Built with FastAPI, MongoDB, and Prometheus monitoring.
 READMEEOF
-                '''
+                    '''
+                }
             }
         }
 
-        // create a zip file with the source code and docker config
-        // filename includes the current date and time
+        // zip up source code and docker config
         stage('Create Archive') {
             steps {
-                sh '''
-                    TIMESTAMP=$(date +"%Y%m%d-%H%M%S")
-                    zip -r "complete-${TIMESTAMP}.zip" \
-                        app/ \
-                        tests/ \
-                        postman/ \
-                        Dockerfile \
-                        Jenkinsfile \
-                        requirements.txt \
-                        README.txt
-                '''
+                dir('pipeline_testing/assigment1') {
+                    sh '''
+                        TIMESTAMP=$(date +"%Y%m%d-%H%M%S")
+                        zip -r "complete-${TIMESTAMP}.zip" \
+                            app/ \
+                            tests/ \
+                            postman/ \
+                            Dockerfile \
+                            Jenkinsfile \
+                            requirements.txt \
+                            README.txt
+                    '''
+                }
             }
         }
     }
 
-    // cleanup if something goes wrong
     post {
         always {
             sh 'docker stop inventory-api-container || true'
             sh 'docker rm inventory-api-container || true'
         }
         success {
-            archiveArtifacts artifacts: 'complete-*.zip', fingerprint: true
-            archiveArtifacts artifacts: 'README.txt', fingerprint: true
+            dir('pipeline_testing/assigment1') {
+                archiveArtifacts artifacts: 'complete-*.zip', fingerprint: true
+                archiveArtifacts artifacts: 'README.txt', fingerprint: true
+            }
         }
     }
 }
