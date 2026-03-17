@@ -1,0 +1,1402 @@
+[
+  {
+    "id": 1001,
+    "name": "NVIDIA RTX 4090",
+    "price": 1599.99,
+    "quantity": 12,
+    "description": "High-end GPU with 24GB VRAM for 4K gaming."
+  },
+  {
+    "id": 1002,
+    "name": "AMD Ryzen 9 7950X",
+    "price": 549.0,
+    "quantity": 25,
+    "description": "16-core 32-thread enthusiast desktop processor."
+  },
+  {
+    "id": 1003,
+    "name": "Samsung 990 Pro 2TB",
+    "price": 179.99,
+    "quantity": 40,
+    "description": "PCIe Gen4 NVMe M.2 SSD with 7450MB/s reads."
+  },
+  {
+    "id": 1004,
+    "name": "Corsair Vengeance 32GB DDR5",
+    "price": 115.0,
+    "quantity": 60,
+    "description": "6000MHz CL36 Dual Channel Memory Kit."
+  },
+  {
+    "id": 1005,
+    "name": "ASUS ROG Strix Z790-E",
+    "price": 489.99,
+    "quantity": 15,
+    "description": "Intel Z790 LGA 1700 ATX Gaming Motherboard."
+  },
+  {
+    "id": 1006,
+    "name": "EVGA SuperNova 850 G6",
+    "price": 139.5,
+    "quantity": 30,
+    "description": "850W 80 Plus Gold Fully Modular Power Supply."
+  },
+  {
+    "id": 1007,
+    "name": "NZXT H7 Flow Case",
+    "price": 129.99,
+    "quantity": 22,
+    "description": "Mid-tower ATX case with high-airflow mesh front."
+  },
+  {
+    "id": 1008,
+    "name": "Noctua NH-D15",
+    "price": 109.95,
+    "quantity": 45,
+    "description": "Dual-tower flagship CPU air cooler."
+  },
+  {
+    "id": 1009,
+    "name": "Western Digital Black 4TB",
+    "price": 99.99,
+    "quantity": 50,
+    "description": "7200 RPM Internal SATA Hard Drive."
+  },
+  {
+    "id": 1010,
+    "name": "Intel Core i7-13700K",
+    "price": 385.0,
+    "quantity": 18,
+    "description": "16-core (8P+8E) unlocked desktop processor."
+  },
+  {
+    "id": 1011,
+    "name": "MSI Ventus 3X RTX 4070",
+    "price": 599.99,
+    "quantity": 10,
+    "description": "Mid-range Ada Lovelace architecture GPU."
+  },
+  {
+    "id": 1012,
+    "name": "G.Skill Trident Z5 64GB",
+    "price": 229.0,
+    "quantity": 15,
+    "description": "DDR5-6400 high-capacity performance RAM."
+  },
+  {
+    "id": 1013,
+    "name": "Be Quiet! Silent Wings 4",
+    "price": 24.9,
+    "quantity": 100,
+    "description": "120mm PWM high-performance cooling fan."
+  },
+  {
+    "id": 1014,
+    "name": "Lian Li SL-Infinity 120",
+    "price": 29.99,
+    "quantity": 85,
+    "description": "Addressable RGB fan with daisy-chaining."
+  },
+  {
+    "id": 1015,
+    "name": "Crucial P5 Plus 1TB",
+    "price": 89.99,
+    "quantity": 55,
+    "description": "Gen4 NVMe SSD with heat sink compatibility."
+  },
+  {
+    "id": 1016,
+    "name": "Seasonic Focus GX-1000",
+    "price": 169.0,
+    "quantity": 20,
+    "description": "1000W 80+ Gold power supply for high-end builds."
+  },
+  {
+    "id": 1017,
+    "name": "Gigabyte M27Q Monitor",
+    "price": 299.99,
+    "quantity": 14,
+    "description": "27-inch 1440p 170Hz IPS gaming display."
+  },
+  {
+    "id": 1018,
+    "name": "Logitech G Pro X Superlight",
+    "price": 145.0,
+    "quantity": 35,
+    "description": "Ultra-lightweight wireless gaming mouse."
+  },
+  {
+    "id": 1019,
+    "name": "Keychron Q1 Mechanical Keyboard",
+    "price": 169.0,
+    "quantity": 12,
+    "description": "75% layout fully customizable keyboard."
+  },
+  {
+    "id": 1020,
+    "name": "Arctic Silver 5 Thermal Paste",
+    "price": 7.99,
+    "quantity": 200,
+    "description": "High-density polysynthetic silver thermal compound."
+  },
+  {
+    "id": 1021,
+    "name": "AMD Radeon RX 7900 XTX",
+    "price": 949.0,
+    "quantity": 8,
+    "description": "RDNA 3 flagship GPU with 24GB GDDR6."
+  },
+  {
+    "id": 1022,
+    "name": "Intel Core i5-13600K",
+    "price": 319.0,
+    "quantity": 22,
+    "description": "14-core mid-range gaming CPU."
+  },
+  {
+    "id": 1023,
+    "name": "ASRock B650M Pro RS",
+    "price": 139.99,
+    "quantity": 14,
+    "description": "Micro ATX AM5 motherboard for Ryzen 7000."
+  },
+  {
+    "id": 1024,
+    "name": "Teamgroup T-Force 16GB",
+    "price": 54.99,
+    "quantity": 75,
+    "description": "DDR4 3600MHz CL18 Gaming RAM."
+  },
+  {
+    "id": 1025,
+    "name": "Fractal Design North",
+    "price": 149.5,
+    "quantity": 11,
+    "description": "Mid-tower case with real wood front panels."
+  },
+  {
+    "id": 1026,
+    "name": "Corsair RM1000e",
+    "price": 159.99,
+    "quantity": 28,
+    "description": "1000W ATX 3.0 fully modular power supply."
+  },
+  {
+    "id": 1027,
+    "name": "Arctic Liquid Freezer II 360",
+    "price": 124.99,
+    "quantity": 19,
+    "description": "All-in-one liquid CPU cooler with 360mm rad."
+  },
+  {
+    "id": 1028,
+    "name": "Kingston FURY Renegade 1TB",
+    "price": 92.0,
+    "quantity": 42,
+    "description": "High-speed Gen4 SSD for gaming and content."
+  },
+  {
+    "id": 1029,
+    "name": "SteelSeries Apex Pro",
+    "price": 179.99,
+    "quantity": 20,
+    "description": "Mechanical keyboard with adjustable actuation."
+  },
+  {
+    "id": 1030,
+    "name": "Razer DeathAdder V3 Pro",
+    "price": 149.99,
+    "quantity": 30,
+    "description": "Ergonomic lightweight wireless gaming mouse."
+  },
+  {
+    "id": 1031,
+    "name": "ASUS TUF Gaming RTX 4080",
+    "price": 1199.99,
+    "quantity": 5,
+    "description": "Durable high-performance 40-series GPU."
+  },
+  {
+    "id": 1032,
+    "name": "AMD Ryzen 5 7600X",
+    "price": 229.0,
+    "quantity": 40,
+    "description": "Budget-friendly 6-core AM5 processor."
+  },
+  {
+    "id": 1033,
+    "name": "MSI MAG B650 Tomahawk",
+    "price": 219.99,
+    "quantity": 12,
+    "description": "Solid AM5 motherboard with great VRMs."
+  },
+  {
+    "id": 1034,
+    "name": "Corsair Dominator 32GB",
+    "price": 185.0,
+    "quantity": 25,
+    "description": "Premium DDR5 memory with CAPELLIX LEDs."
+  },
+  {
+    "id": 1035,
+    "name": "Western Digital SN850X 1TB",
+    "price": 109.99,
+    "quantity": 38,
+    "description": "Top-tier PCIe 4.0 gaming SSD."
+  },
+  {
+    "id": 1036,
+    "name": "Phanteks NV7 Case",
+    "price": 219.99,
+    "quantity": 7,
+    "description": "Showcase full-tower case with seamless glass."
+  },
+  {
+    "id": 1037,
+    "name": "Thermaltake Toughpower 750W",
+    "price": 105.0,
+    "quantity": 33,
+    "description": "80+ Gold semi-modular power supply."
+  },
+  {
+    "id": 1038,
+    "name": "Deepcool AK620",
+    "price": 64.99,
+    "quantity": 50,
+    "description": "High-performance dual-tower air cooler."
+  },
+  {
+    "id": 1039,
+    "name": "Seagate IronWolf 8TB",
+    "price": 189.99,
+    "quantity": 15,
+    "description": "NAS-optimized 7200RPM hard drive."
+  },
+  {
+    "id": 1040,
+    "name": "Intel Core i9-13900KS",
+    "price": 729.0,
+    "quantity": 4,
+    "description": "Special edition 6GHz out-of-the-box CPU."
+  },
+  {
+    "id": 1041,
+    "name": "Gigabyte Eagle RTX 3060",
+    "price": 289.99,
+    "quantity": 18,
+    "description": "Entry-level 1080p Ray Tracing GPU."
+  },
+  {
+    "id": 1042,
+    "name": "Crucial RAM 16GB DDR5",
+    "price": 45.0,
+    "quantity": 100,
+    "description": "Basic 4800MHz DDR5 non-RGB stick."
+  },
+  {
+    "id": 1043,
+    "name": "Corsair iCUE H150i Elite",
+    "price": 199.99,
+    "quantity": 14,
+    "description": "360mm AIO with LCD screen pump head."
+  },
+  {
+    "id": 1044,
+    "name": "Lian Li O11 Dynamic EVO",
+    "price": 175.0,
+    "quantity": 20,
+    "description": "Modular mid-tower popular for water cooling."
+  },
+  {
+    "id": 1045,
+    "name": "Sabrent Rocket 4 Plus 2TB",
+    "price": 199.99,
+    "quantity": 22,
+    "description": "DirectStorage ready high-speed NVMe."
+  },
+  {
+    "id": 1046,
+    "name": "Cooler Master V850 SFX",
+    "price": 155.0,
+    "quantity": 12,
+    "description": "Small form factor 850W Gold PSU."
+  },
+  {
+    "id": 1047,
+    "name": "ASUS ProArt Z790",
+    "price": 470.0,
+    "quantity": 6,
+    "description": "Creator-focused motherboard with Thunderbolt 4."
+  },
+  {
+    "id": 1048,
+    "name": "Corsair K70 RGB TKL",
+    "price": 139.99,
+    "quantity": 24,
+    "description": "Tournament grade mechanical keyboard."
+  },
+  {
+    "id": 1049,
+    "name": "BenQ Zowie XL2546K",
+    "price": 499.0,
+    "quantity": 10,
+    "description": "240Hz esports monitor for competitive play."
+  },
+  {
+    "id": 1050,
+    "name": "Thermal Grizzly Kryonaut",
+    "price": 11.99,
+    "quantity": 150,
+    "description": "High-end thermal grease for overclocking."
+  },
+  {
+    "id": 1051,
+    "name": "Sapphire Pulse RX 7800 XT",
+    "price": 499.99,
+    "quantity": 15,
+    "description": "Efficient 1440p gaming AMD GPU."
+  },
+  {
+    "id": 1052,
+    "name": "Intel Core i5-12400F",
+    "price": 149.0,
+    "quantity": 45,
+    "description": "Best value budget gaming CPU (no iGPU)."
+  },
+  {
+    "id": 1053,
+    "name": "Gigabyte B760 AORUS Elite",
+    "price": 179.99,
+    "quantity": 25,
+    "description": "Mainstream Intel B760 motherboard."
+  },
+  {
+    "id": 1054,
+    "name": "G.Skill Ripjaws V 32GB",
+    "price": 69.99,
+    "quantity": 80,
+    "description": "Classic DDR4 3200MHz CL16 RAM kit."
+  },
+  {
+    "id": 1055,
+    "name": "Samsung 870 EVO 1TB",
+    "price": 89.99,
+    "quantity": 65,
+    "description": "Reliable SATA SSD for bulk storage."
+  },
+  {
+    "id": 1056,
+    "name": "Hyte Y60 Case",
+    "price": 199.99,
+    "quantity": 9,
+    "description": "Panoramic glass case with vertical GPU mount."
+  },
+  {
+    "id": 1057,
+    "name": "SeaSonic Prime 1300W",
+    "price": 320.0,
+    "quantity": 3,
+    "description": "80+ Platinum ultra-high wattage PSU."
+  },
+  {
+    "id": 1058,
+    "name": "NZXT T120 RGB Cooler",
+    "price": 49.99,
+    "quantity": 40,
+    "description": "Sleek single-tower air cooler with RGB."
+  },
+  {
+    "id": 1059,
+    "name": "Toshiba X300 10TB",
+    "price": 220.0,
+    "quantity": 10,
+    "description": "High-performance 3.5-inch desktop HDD."
+  },
+  {
+    "id": 1060,
+    "name": "AMD Ryzen 7 5800X3D",
+    "price": 315.0,
+    "quantity": 30,
+    "description": "Legendary AM4 gaming CPU with V-Cache."
+  },
+  {
+    "id": 1061,
+    "name": "Zotac Gaming RTX 4060 Ti",
+    "price": 389.99,
+    "quantity": 22,
+    "description": "Compact 40-series card for small builds."
+  },
+  {
+    "id": 1062,
+    "name": "Patriot Viper Steel 16GB",
+    "price": 48.0,
+    "quantity": 55,
+    "description": "DDR4 4400MHz extreme speed memory."
+  },
+  {
+    "id": 1063,
+    "name": "Noctua NF-A12x25",
+    "price": 32.9,
+    "quantity": 120,
+    "description": "Industry-leading quiet 120mm case fan."
+  },
+  {
+    "id": 1064,
+    "name": "Corsair 4000D Airflow",
+    "price": 94.99,
+    "quantity": 50,
+    "description": "Minimalist high-airflow mid-tower case."
+  },
+  {
+    "id": 1065,
+    "name": "PNY CS2140 500GB",
+    "price": 34.99,
+    "quantity": 90,
+    "description": "Entry-level Gen4 NVMe for OS boot drive."
+  },
+  {
+    "id": 1066,
+    "name": "FSP Dagger Pro 650W",
+    "price": 99.0,
+    "quantity": 20,
+    "description": "SFX power supply for Mini-ITX builds."
+  },
+  {
+    "id": 1067,
+    "name": "ASUS ROG Crosshair X670E",
+    "price": 699.0,
+    "quantity": 5,
+    "description": "Flagship AM5 overclocking motherboard."
+  },
+  {
+    "id": 1068,
+    "name": "Razer Huntsman V2",
+    "price": 159.0,
+    "quantity": 18,
+    "description": "Optical switch fast-response keyboard."
+  },
+  {
+    "id": 1069,
+    "name": "Dell UltraSharp U2723QE",
+    "price": 580.0,
+    "quantity": 8,
+    "description": "4K IPS Black monitor for color accuracy."
+  },
+  {
+    "id": 1070,
+    "name": "CableMod Mesh Kit",
+    "price": 99.9,
+    "quantity": 25,
+    "description": "Custom braided PSU cable extension set."
+  },
+  {
+    "id": 1071,
+    "name": "XFX Speedster RX 7600",
+    "price": 269.99,
+    "quantity": 30,
+    "description": "Affordable RDNA 3 1080p GPU."
+  },
+  {
+    "id": 1072,
+    "name": "Intel Core i3-13100",
+    "price": 145.0,
+    "quantity": 50,
+    "description": "Quad-core productivity and light gaming CPU."
+  },
+  {
+    "id": 1073,
+    "name": "MSI PRO Z790-P",
+    "price": 209.0,
+    "quantity": 15,
+    "description": "Professional series Z790 motherboard."
+  },
+  {
+    "id": 1074,
+    "name": "Kingston FURY Beast 32GB",
+    "price": 105.0,
+    "quantity": 45,
+    "description": "Low-profile DDR5 5600MHz RAM."
+  },
+  {
+    "id": 1075,
+    "name": "Silicon Power A60 1TB",
+    "price": 45.99,
+    "quantity": 110,
+    "description": "Budget NVMe M.2 SSD for general use."
+  },
+  {
+    "id": 1076,
+    "name": "Cooler Master TD500 Mesh",
+    "price": 109.99,
+    "quantity": 18,
+    "description": "ATX case with 3D diamond mesh front."
+  },
+  {
+    "id": 1077,
+    "name": "Corsair SF750",
+    "price": 165.0,
+    "quantity": 14,
+    "description": "Platinum rated SFX power supply."
+  },
+  {
+    "id": 1078,
+    "name": "Be Quiet! Dark Rock Pro 4",
+    "price": 89.9,
+    "quantity": 30,
+    "description": "Silent premium dual-tower air cooler."
+  },
+  {
+    "id": 1079,
+    "name": "WD Red Plus 12TB",
+    "price": 249.99,
+    "quantity": 8,
+    "description": "Large capacity NAS hard drive."
+  },
+  {
+    "id": 1080,
+    "name": "AMD Ryzen 7 7700X",
+    "price": 340.0,
+    "quantity": 20,
+    "description": "Efficient 8-core gaming and productivity CPU."
+  },
+  {
+    "id": 1081,
+    "name": "EVGA RTX 3060 Ti",
+    "price": 399.0,
+    "quantity": 12,
+    "description": "Excellent 1440p performer (Last Gen)."
+  },
+  {
+    "id": 1082,
+    "name": "Teamgroup Elite 8GB",
+    "price": 22.0,
+    "quantity": 150,
+    "description": "Basic 3200MHz DDR4 SODIMM for laptops."
+  },
+  {
+    "id": 1083,
+    "name": "Noctua NH-L9i",
+    "price": 44.95,
+    "quantity": 35,
+    "description": "Ultra low-profile cooler for ITX cases."
+  },
+  {
+    "id": 1084,
+    "name": "Phanteks Eclipse G360A",
+    "price": 99.99,
+    "quantity": 25,
+    "description": "Mesh front ATX case with triple RGB fans."
+  },
+  {
+    "id": 1085,
+    "name": "Lexar NM790 4TB",
+    "price": 249.99,
+    "quantity": 12,
+    "description": "Fast and high-capacity Gen4 M.2 SSD."
+  },
+  {
+    "id": 1086,
+    "name": "Thermaltake Smart 600W",
+    "price": 45.0,
+    "quantity": 60,
+    "description": "Budget 80+ White non-modular PSU."
+  },
+  {
+    "id": 1087,
+    "name": "MSI MPG X670E Carbon",
+    "price": 459.99,
+    "quantity": 8,
+    "description": "WiFi 6E enabled high-end AM5 board."
+  },
+  {
+    "id": 1088,
+    "name": "Logitech G502 X Plus",
+    "price": 159.99,
+    "quantity": 28,
+    "description": "Wireless RGB gaming mouse with hybrid switches."
+  },
+  {
+    "id": 1089,
+    "name": "ASUS ROG Swift PG27AQN",
+    "price": 949.0,
+    "quantity": 4,
+    "description": "360Hz 1440p professional gaming monitor."
+  },
+  {
+    "id": 1090,
+    "name": "Elgato Stream Deck MK.2",
+    "price": 149.99,
+    "quantity": 22,
+    "description": "15-key customizable studio controller."
+  },
+  {
+    "id": 1091,
+    "name": "Gigabyte Windforce RTX 4070 Ti",
+    "price": 799.99,
+    "quantity": 9,
+    "description": "Triple fan cooled 1440p beast."
+  },
+  {
+    "id": 1092,
+    "name": "AMD Ryzen 5 5600",
+    "price": 135.0,
+    "quantity": 100,
+    "description": "Price-to-performance king for AM4 builds."
+  },
+  {
+    "id": 1093,
+    "name": "ASRock Z790 PG Lightning",
+    "price": 189.99,
+    "quantity": 15,
+    "description": "Affordable Z790 Intel motherboard."
+  },
+  {
+    "id": 1094,
+    "name": "ADATA XPG Lancer 32GB",
+    "price": 129.99,
+    "quantity": 30,
+    "description": "DDR5 6000MHz memory with RGB sync."
+  },
+  {
+    "id": 1095,
+    "name": "Crucial MX500 2TB",
+    "price": 119.99,
+    "quantity": 40,
+    "description": "Reliable 2.5-inch SATA SSD for bulk files."
+  },
+  {
+    "id": 1096,
+    "name": "SAMA IM01 Case",
+    "price": 69.99,
+    "quantity": 25,
+    "description": "Compact mATX/ITX versatile small case."
+  },
+  {
+    "id": 1097,
+    "name": "Apevia Prestige 800W",
+    "price": 66.0,
+    "quantity": 45,
+    "description": "Budget-friendly 80+ Gold power supply."
+  },
+  {
+    "id": 1098,
+    "name": "ID-COOLING IS-55",
+    "price": 39.99,
+    "quantity": 40,
+    "description": "Slim 55mm tall low-profile air cooler."
+  },
+  {
+    "id": 1099,
+    "name": "HGST Ultrastar 14TB",
+    "price": 280.0,
+    "quantity": 5,
+    "description": "Enterprise-grade high-capacity HDD."
+  },
+  {
+    "id": 1100,
+    "name": "Intel Core i9-12900K",
+    "price": 399.0,
+    "quantity": 12,
+    "description": "12th Gen flagship 16-core processor."
+  },
+  {
+    "id": 1101,
+    "name": "NVIDIA RTX 4060",
+    "price": 299.0,
+    "quantity": 40,
+    "description": "Efficient 1080p gaming card with DLSS 3."
+  },
+  {
+    "id": 1102,
+    "name": "AMD Ryzen 3 4100",
+    "price": 65.0,
+    "quantity": 80,
+    "description": "Entry-level 4-core processor for basic tasks."
+  },
+  {
+    "id": 1103,
+    "name": "ASUS Prime B550M-A",
+    "price": 109.99,
+    "quantity": 35,
+    "description": "Budget AM4 motherboard with WiFi."
+  },
+  {
+    "id": 1104,
+    "name": "Silicon Power 16GB DDR4",
+    "price": 34.99,
+    "quantity": 120,
+    "description": "Affordable 3200MHz RAM for home PCs."
+  },
+  {
+    "id": 1105,
+    "name": "Samsung 970 EVO Plus 2TB",
+    "price": 129.0,
+    "quantity": 50,
+    "description": "Proven PCIe 3.0 NVMe performance."
+  },
+  {
+    "id": 1106,
+    "name": "BitFenix Nova Mesh",
+    "price": 64.99,
+    "quantity": 20,
+    "description": "Affordable high-airflow micro-ATX case."
+  },
+  {
+    "id": 1107,
+    "name": "Thermaltake GF3 1000W",
+    "price": 179.99,
+    "quantity": 15,
+    "description": "ATX 3.0 ready Gold power supply."
+  },
+  {
+    "id": 1108,
+    "name": "Cooler Master Hyper 212",
+    "price": 49.99,
+    "quantity": 80,
+    "description": "Legendary single-tower air cooler."
+  },
+  {
+    "id": 1109,
+    "name": "Seagate BarraCuda 2TB",
+    "price": 49.99,
+    "quantity": 100,
+    "description": "Standard 7200RPM 3.5-inch hard drive."
+  },
+  {
+    "id": 1110,
+    "name": "Intel Core i5-13400",
+    "price": 239.0,
+    "quantity": 30,
+    "description": "Efficient 10-core mid-range desktop CPU."
+  },
+  {
+    "id": 1111,
+    "name": "PowerColor Hellhound RX 7900 XT",
+    "price": 749.99,
+    "quantity": 12,
+    "description": "High-end RDNA 3 graphics card."
+  },
+  {
+    "id": 1112,
+    "name": "Corsair Vengeance LPX 64GB",
+    "price": 145.0,
+    "quantity": 20,
+    "description": "Large capacity DDR4 kit for editing."
+  },
+  {
+    "id": 1113,
+    "name": "Lian Li UNI Fan AL120",
+    "price": 89.99,
+    "quantity": 50,
+    "description": "3-pack of interlocking performance fans."
+  },
+  {
+    "id": 1114,
+    "name": "Antec Performance 1 FT",
+    "price": 159.99,
+    "quantity": 10,
+    "description": "Full-tower case with temperature display."
+  },
+  {
+    "id": 1115,
+    "name": "Western Digital Blue 1TB",
+    "price": 44.99,
+    "quantity": 150,
+    "description": "Standard 2.5-inch SATA SSD for upgrades."
+  },
+  {
+    "id": 1116,
+    "name": "Corsair CX650M",
+    "price": 69.99,
+    "quantity": 40,
+    "description": "Semi-modular 650W 80+ Bronze PSU."
+  },
+  {
+    "id": 1117,
+    "name": "Gigabyte X670 Gaming X",
+    "price": 249.99,
+    "quantity": 14,
+    "description": "Entry-level X670 AM5 motherboard."
+  },
+  {
+    "id": 1118,
+    "name": "Logitech G213 Prodigy",
+    "price": 49.99,
+    "quantity": 60,
+    "description": "Membrane gaming keyboard with RGB."
+  },
+  {
+    "id": 1119,
+    "name": "Samsung Odyssey G7",
+    "price": 549.99,
+    "quantity": 12,
+    "description": "32-inch curved 240Hz QLED monitor."
+  },
+  {
+    "id": 1120,
+    "name": "TP-Link WiFi 6 Card",
+    "price": 39.99,
+    "quantity": 70,
+    "description": "PCIe wireless adapter with Bluetooth 5.2."
+  },
+  {
+    "id": 1121,
+    "name": "NVIDIA RTX 3050",
+    "price": 229.0,
+    "quantity": 35,
+    "description": "Budget Ray Tracing entry graphics."
+  },
+  {
+    "id": 1122,
+    "name": "AMD Ryzen 7 7800X3D",
+    "price": 449.0,
+    "quantity": 10,
+    "description": "Best-in-class gaming CPU with 3D Cache."
+  },
+  {
+    "id": 1123,
+    "name": "MSI MAG Z790 Tomahawk",
+    "price": 269.99,
+    "quantity": 20,
+    "description": "High-quality Z790 board with WiFi 6E."
+  },
+  {
+    "id": 1124,
+    "name": "Teamgroup T-Create 32GB",
+    "price": 99.99,
+    "quantity": 35,
+    "description": "Stable DDR5 memory for content creators."
+  },
+  {
+    "id": 1125,
+    "name": "Kingston A400 480GB",
+    "price": 28.99,
+    "quantity": 200,
+    "description": "Cheap SATA SSD for older PC revivals."
+  },
+  {
+    "id": 1126,
+    "name": "Fractal Design Meshify 2",
+    "price": 159.99,
+    "quantity": 15,
+    "description": "Premium airflow-focused ATX case."
+  },
+  {
+    "id": 1127,
+    "name": "NZXT C850 Gold",
+    "price": 119.99,
+    "quantity": 22,
+    "description": "Reliable 850W 80+ Gold power supply."
+  },
+  {
+    "id": 1128,
+    "name": "Scythe Fuma 3",
+    "price": 49.99,
+    "quantity": 30,
+    "description": "Offset dual-tower air cooler for RAM clearance."
+  },
+  {
+    "id": 1129,
+    "name": "WD Blue 6TB HDD",
+    "price": 115.0,
+    "quantity": 45,
+    "description": "Massive storage for photos and videos."
+  },
+  {
+    "id": 1130,
+    "name": "Intel Core i7-12700K",
+    "price": 289.0,
+    "quantity": 25,
+    "description": "Powerful 12th Gen 12-core processor."
+  },
+  {
+    "id": 1131,
+    "name": "EVGA RTX 3070",
+    "price": 499.0,
+    "quantity": 8,
+    "description": "Solid 1440p gaming performance (Refurb)."
+  },
+  {
+    "id": 1132,
+    "name": "Crucial 32GB DDR4",
+    "price": 65.0,
+    "quantity": 70,
+    "description": "Standard dual-stick 3200MHz memory kit."
+  },
+  {
+    "id": 1133,
+    "name": "Thermalright Peerless Assassin",
+    "price": 34.9,
+    "quantity": 150,
+    "description": "Best value dual-tower air cooler."
+  },
+  {
+    "id": 1134,
+    "name": "Be Quiet! Pure Base 500DX",
+    "price": 109.9,
+    "quantity": 18,
+    "description": "Silent mid-tower with subtle ARGB."
+  },
+  {
+    "id": 1135,
+    "name": "Sabrent Rocket 1TB",
+    "price": 79.99,
+    "quantity": 60,
+    "description": "Gen3 NVMe SSD with reliable TBW."
+  },
+  {
+    "id": 1136,
+    "name": "Cooler Master MWE Gold 850",
+    "price": 115.0,
+    "quantity": 20,
+    "description": "Full-modular 850W Gold efficiency PSU."
+  },
+  {
+    "id": 1137,
+    "name": "ASUS ROG Strix B650-I",
+    "price": 259.99,
+    "quantity": 12,
+    "description": "Mini-ITX AM5 board for small builds."
+  },
+  {
+    "id": 1138,
+    "name": "Razer Viper V2 Pro",
+    "price": 149.99,
+    "quantity": 25,
+    "description": "Symmetrical ultra-light wireless mouse."
+  },
+  {
+    "id": 1139,
+    "name": "LG UltraGear 34GP83A-B",
+    "price": 749.99,
+    "quantity": 6,
+    "description": "34-inch Ultrawide 144Hz IPS monitor."
+  },
+  {
+    "id": 1140,
+    "name": "Blue Yeti USB Mic",
+    "price": 129.0,
+    "quantity": 30,
+    "description": "High-fidelity microphone for streaming."
+  },
+  {
+    "id": 1141,
+    "name": "ASRock Phantom RX 6700 XT",
+    "price": 329.99,
+    "quantity": 15,
+    "description": "Affordable 1440p AMD graphics card."
+  },
+  {
+    "id": 1142,
+    "name": "Intel Celeron G6900",
+    "price": 59.0,
+    "quantity": 40,
+    "description": "Dual-core LGA 1700 CPU for office use."
+  },
+  {
+    "id": 1143,
+    "name": "Biostar B660MX-E",
+    "price": 85.0,
+    "quantity": 20,
+    "description": "Entry level B660 Micro-ATX motherboard."
+  },
+  {
+    "id": 1144,
+    "name": "Mushkin Redline 16GB",
+    "price": 59.99,
+    "quantity": 45,
+    "description": "High-performance DDR4 with low latency."
+  },
+  {
+    "id": 1145,
+    "name": "Teamgroup MP34 2TB",
+    "price": 95.0,
+    "quantity": 55,
+    "description": "DRAM-cached PCIe 3.0 NVMe SSD."
+  },
+  {
+    "id": 1146,
+    "name": "Deepcool CH510",
+    "price": 79.99,
+    "quantity": 30,
+    "description": "Clean ATX case with built-in GPU bracket."
+  },
+  {
+    "id": 1147,
+    "name": "Silverstone ST1500-TI",
+    "price": 420.0,
+    "quantity": 2,
+    "description": "1500W 80+ Titanium power supply."
+  },
+  {
+    "id": 1148,
+    "name": "EK-AIO Basic 240",
+    "price": 89.99,
+    "quantity": 15,
+    "description": "No-RGB focused high performance AIO."
+  },
+  {
+    "id": 1149,
+    "name": "Toshiba P300 3TB",
+    "price": 69.99,
+    "quantity": 40,
+    "description": "Value-oriented 3.5-inch desktop hard drive."
+  },
+  {
+    "id": 1150,
+    "name": "AMD Ryzen 9 5900X",
+    "price": 330.0,
+    "quantity": 25,
+    "description": "12-core productivity beast for AM4."
+  },
+  {
+    "id": 1151,
+    "name": "Sapphire Nitro+ RX 7900 XTX",
+    "price": 1049.0,
+    "quantity": 6,
+    "description": "Premium RDNA 3 card with vapor chamber."
+  },
+  {
+    "id": 1152,
+    "name": "G.Skill Flare X5 32GB",
+    "price": 104.99,
+    "quantity": 50,
+    "description": "AMD EXPO optimized DDR5-6000 RAM."
+  },
+  {
+    "id": 1153,
+    "name": "ARCTIC P12 PWM PST",
+    "price": 9.99,
+    "quantity": 300,
+    "description": "Pressure-optimized 120mm value fan."
+  },
+  {
+    "id": 1154,
+    "name": "Lian Li PC-O11 Air Mini",
+    "price": 119.99,
+    "quantity": 14,
+    "description": "Airflow-optimized small form factor case."
+  },
+  {
+    "id": 1155,
+    "name": "Western Digital Green 2TB",
+    "price": 55.0,
+    "quantity": 90,
+    "description": "Energy-efficient SATA SSD for storage."
+  },
+  {
+    "id": 1156,
+    "name": "Rosewill Capstone 550W",
+    "price": 54.99,
+    "quantity": 35,
+    "description": "80+ Gold semi-modular budget PSU."
+  },
+  {
+    "id": 1157,
+    "name": "MSI MEG Z790 ACE",
+    "price": 609.99,
+    "quantity": 4,
+    "description": "Top-tier E-ATX Intel motherboard."
+  },
+  {
+    "id": 1158,
+    "name": "SteelSeries Rival 3",
+    "price": 29.99,
+    "quantity": 100,
+    "description": "Budget-friendly ergonomic gaming mouse."
+  },
+  {
+    "id": 1159,
+    "name": "AOC C24G1A",
+    "price": 149.99,
+    "quantity": 25,
+    "description": "24-inch 165Hz curved gaming monitor."
+  },
+  {
+    "id": 1160,
+    "name": "Creative Sound BlasterX G6",
+    "price": 129.99,
+    "quantity": 15,
+    "description": "External high-res gaming DAC/Amp."
+  },
+  {
+    "id": 1161,
+    "name": "PNY XLR8 RTX 4080",
+    "price": 1149.0,
+    "quantity": 7,
+    "description": "Triple fan 40-series GPU with RGB."
+  },
+  {
+    "id": 1162,
+    "name": "Intel Core i5-11400",
+    "price": 165.0,
+    "quantity": 30,
+    "description": "Reliable 6-core 11th Gen processor."
+  },
+  {
+    "id": 1163,
+    "name": "ASUS Prime X670-P",
+    "price": 235.0,
+    "quantity": 18,
+    "description": "Standard ATX X670 AM5 motherboard."
+  },
+  {
+    "id": 1164,
+    "name": "Corsair Vengeance RGB 16GB",
+    "price": 65.0,
+    "quantity": 85,
+    "description": "3600MHz DDR4 with dynamic lighting."
+  },
+  {
+    "id": 1165,
+    "name": "Samsung 980 1TB",
+    "price": 79.99,
+    "quantity": 70,
+    "description": "DRAM-less PCIe 3.0 NVMe for fast boots."
+  },
+  {
+    "id": 1166,
+    "name": "Montech Sky Two",
+    "price": 99.0,
+    "quantity": 22,
+    "description": "Dual-glass side panels with 4 ARGB fans."
+  },
+  {
+    "id": 1167,
+    "name": "Be Quiet! Straight Power 11",
+    "price": 149.0,
+    "quantity": 12,
+    "description": "Ultra-silent 850W 80+ Platinum PSU."
+  },
+  {
+    "id": 1168,
+    "name": "Deepcool AS500 Plus",
+    "price": 59.99,
+    "quantity": 25,
+    "description": "Single-tower cooler with dual 140mm fans."
+  },
+  {
+    "id": 1169,
+    "name": "Seagate Exos 18TB",
+    "price": 310.0,
+    "quantity": 10,
+    "description": "Enterprise-level massive capacity HDD."
+  },
+  {
+    "id": 1170,
+    "name": "Intel Core i7-13700F",
+    "price": 349.0,
+    "quantity": 20,
+    "description": "Locked 16-core CPU for gaming rigs."
+  },
+  {
+    "id": 1171,
+    "name": "Gigabyte Windforce RTX 3060",
+    "price": 299.0,
+    "quantity": 25,
+    "description": "Solid mid-range 12GB VRAM GPU."
+  },
+  {
+    "id": 1172,
+    "name": "G.Skill Aegis 16GB",
+    "price": 36.0,
+    "quantity": 120,
+    "description": "Budget-friendly DDR4 3000MHz memory."
+  },
+  {
+    "id": 1173,
+    "name": "ASUS ROG Ryujin III 360",
+    "price": 329.99,
+    "quantity": 8,
+    "description": "Flagship AIO with 3.5-inch LCD screen."
+  },
+  {
+    "id": 1174,
+    "name": "Cooler Master Q300L",
+    "price": 45.0,
+    "quantity": 55,
+    "description": "Micro-ATX case with patterned dust filters."
+  },
+  {
+    "id": 1175,
+    "name": "Crucial P3 2TB",
+    "price": 99.99,
+    "quantity": 65,
+    "description": "Affordable PCIe 3.0 M.2 storage."
+  },
+  {
+    "id": 1176,
+    "name": "Thermaltake Smart BM2 750W",
+    "price": 74.99,
+    "quantity": 30,
+    "description": "80+ Bronze semi-modular power unit."
+  },
+  {
+    "id": 1177,
+    "name": "MSI B550-A Pro",
+    "price": 139.99,
+    "quantity": 40,
+    "description": "Reliable AM4 motherboard for Ryzen 5000."
+  },
+  {
+    "id": 1178,
+    "name": "Corsair Nightsword RGB",
+    "price": 79.99,
+    "quantity": 20,
+    "description": "Tunable weight FPS/MOBA gaming mouse."
+  },
+  {
+    "id": 1179,
+    "name": "MSI Optix MAG274QRF-QD",
+    "price": 419.0,
+    "quantity": 10,
+    "description": "Fast IPS 1440p monitor with Quantum Dot."
+  },
+  {
+    "id": 1180,
+    "name": "Glorious Model O Wireless",
+    "price": 79.99,
+    "quantity": 35,
+    "description": "Lightweight honeycomb wireless mouse."
+  },
+  {
+    "id": 1181,
+    "name": "AMD Radeon RX 6600",
+    "price": 199.99,
+    "quantity": 50,
+    "description": "Best value 1080p gaming graphics card."
+  },
+  {
+    "id": 1182,
+    "name": "Intel Core i5-13500",
+    "price": 249.0,
+    "quantity": 25,
+    "description": "Versatile 14-core mid-range CPU."
+  },
+  {
+    "id": 1183,
+    "name": "ASRock Z790 Steel Legend",
+    "price": 249.99,
+    "quantity": 12,
+    "description": "Durable Z790 board with PCIe 5.0."
+  },
+  {
+    "id": 1184,
+    "name": "Kingston FURY Impact 16GB",
+    "price": 52.0,
+    "quantity": 80,
+    "description": "DDR5 SODIMM for gaming laptops."
+  },
+  {
+    "id": 1185,
+    "name": "SK Hynix Gold P31 1TB",
+    "price": 85.0,
+    "quantity": 45,
+    "description": "Power-efficient high speed NVMe."
+  },
+  {
+    "id": 1186,
+    "name": "Phanteks Enthoo Pro",
+    "price": 119.99,
+    "quantity": 10,
+    "description": "Full-tower case with massive expansion."
+  },
+  {
+    "id": 1187,
+    "name": "SeaSonic B12 BC-750",
+    "price": 79.99,
+    "quantity": 28,
+    "description": "Non-modular 750W 80+ Bronze PSU."
+  },
+  {
+    "id": 1188,
+    "name": "Noctua NH-U12S",
+    "price": 74.95,
+    "quantity": 40,
+    "description": "Slim 120mm tower air cooler."
+  },
+  {
+    "id": 1189,
+    "name": "WD Gold 4TB",
+    "price": 149.0,
+    "quantity": 15,
+    "description": "Enterprise-class high reliability HDD."
+  },
+  {
+    "id": 1190,
+    "name": "AMD Ryzen 5 7600",
+    "price": 199.0,
+    "quantity": 60,
+    "description": "Non-X efficient 6-core AM5 processor."
+  },
+  {
+    "id": 1191,
+    "name": "NVIDIA RTX 4070 Founders",
+    "price": 599.0,
+    "quantity": 5,
+    "description": "Original dual-fan compact 4070."
+  },
+  {
+    "id": 1192,
+    "name": "Patriot Signature 8GB",
+    "price": 19.99,
+    "quantity": 200,
+    "description": "Basic DDR4 2666MHz for office builds."
+  },
+  {
+    "id": 1193,
+    "name": "Fractal Design Celsius S36",
+    "price": 179.99,
+    "quantity": 12,
+    "description": "Quiet 360mm AIO with smart mode."
+  },
+  {
+    "id": 1194,
+    "name": "Lian Li Lancool 216",
+    "price": 99.99,
+    "quantity": 30,
+    "description": "Airflow-focused case with two 160mm fans."
+  },
+  {
+    "id": 1195,
+    "name": "Samsung 870 QVO 4TB",
+    "price": 249.99,
+    "quantity": 20,
+    "description": "High-capacity 2.5-inch SATA SSD."
+  },
+  {
+    "id": 1196,
+    "name": "EVGA 600 W1",
+    "price": 49.99,
+    "quantity": 55,
+    "description": "Standard 600W 80+ White power supply."
+  },
+  {
+    "id": 1197,
+    "name": "ASUS TUF Gaming B760M",
+    "price": 159.99,
+    "quantity": 25,
+    "description": "Micro-ATX Intel board with WiFi."
+  },
+  {
+    "id": 1198,
+    "name": "HyperX Alloy Origins",
+    "price": 89.99,
+    "quantity": 30,
+    "description": "Full-size mechanical keyboard with RGB."
+  },
+  {
+    "id": 1199,
+    "name": "Acer Nitro XV272U",
+    "price": 249.99,
+    "quantity": 18,
+    "description": "27-inch 1440p 170Hz gaming monitor."
+  },
+  {
+    "id": 1200,
+    "name": "Elgato Facecam",
+    "price": 149.99,
+    "quantity": 20,
+    "description": "Professional 1080p60 streaming webcam."
+  }
+]

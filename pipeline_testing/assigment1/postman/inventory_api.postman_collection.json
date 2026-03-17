@@ -1,0 +1,367 @@
+{
+  "info": {
+    "name": "Inventory API Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000"
+    }
+  ],
+  "item": [
+    {
+      "name": "Get Single Product",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/getSingleProduct?id=1001",
+          "host": ["{{base_url}}"],
+          "path": ["getSingleProduct"],
+          "query": [{ "key": "id", "value": "1001" }]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Response has correct product id', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data.id).to.eql(1001);",
+              "});",
+              "pm.test('Response has all required fields', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data).to.have.property('name');",
+              "    pm.expect(data).to.have.property('price');",
+              "    pm.expect(data).to.have.property('quantity');",
+              "    pm.expect(data).to.have.property('description');",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Single Product Not Found",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/getSingleProduct?id=999999",
+          "host": ["{{base_url}}"],
+          "path": ["getSingleProduct"],
+          "query": [{ "key": "id", "value": "999999" }]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 404 for missing product', function () {",
+              "    pm.response.to.have.status(404);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get All Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/getAll",
+          "host": ["{{base_url}}"],
+          "path": ["getAll"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Response is an array with products', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data).to.be.an('array');",
+              "    pm.expect(data.length).to.be.greaterThan(0);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Add New Product",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"id\": 88888, \"name\": \"Newman Test Product\", \"price\": 29.99, \"quantity\": 3, \"description\": \"Temporary product added by Newman tests\"}"
+        },
+        "url": {
+          "raw": "{{base_url}}/addNew",
+          "host": ["{{base_url}}"],
+          "path": ["addNew"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 201', function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "pm.test('Returned product matches what we sent', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data.id).to.eql(88888);",
+              "    pm.expect(data.name).to.eql('Newman Test Product');",
+              "    pm.expect(data.price).to.eql(29.99);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Delete the Test Product",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/deleteOne?id=88888",
+          "host": ["{{base_url}}"],
+          "path": ["deleteOne"],
+          "query": [{ "key": "id", "value": "88888" }]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Delete confirmation message returned', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data.detail).to.include('deleted');",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Delete Non-Existent Product",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/deleteOne?id=999999",
+          "host": ["{{base_url}}"],
+          "path": ["deleteOne"],
+          "query": [{ "key": "id", "value": "999999" }]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 404 for missing product', function () {",
+              "    pm.response.to.have.status(404);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Starts With Letter N",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/startsWith?letter=N",
+          "host": ["{{base_url}}"],
+          "path": ["startsWith"],
+          "query": [{ "key": "letter", "value": "N" }]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('All product names start with N', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data).to.be.an('array');",
+              "    data.forEach(function (product) {",
+              "        pm.expect(product.name.toUpperCase().startsWith('N')).to.be.true;",
+              "    });",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Paginate Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/paginate?start=1001&end=1020",
+          "host": ["{{base_url}}"],
+          "path": ["paginate"],
+          "query": [
+            { "key": "start", "value": "1001" },
+            { "key": "end", "value": "1020" }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Returns max 10 products', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data).to.be.an('array');",
+              "    pm.expect(data.length).to.be.at.most(10);",
+              "});",
+              "pm.test('Products are sorted by id', function () {",
+              "    var data = pm.response.json();",
+              "    for (var i = 1; i < data.length; i++) {",
+              "        pm.expect(data[i].id).to.be.greaterThan(data[i - 1].id);",
+              "    }",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Convert Price to EUR",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/convert?id=1001",
+          "host": ["{{base_url}}"],
+          "path": ["convert"],
+          "query": [{ "key": "id", "value": "1001" }]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Response has conversion fields', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data).to.have.property('original_price_usd');",
+              "    pm.expect(data).to.have.property('converted_price_eur');",
+              "    pm.expect(data).to.have.property('exchange_rate');",
+              "});",
+              "pm.test('Exchange rate and converted price are positive', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data.exchange_rate).to.be.greaterThan(0);",
+              "    pm.expect(data.converted_price_eur).to.be.greaterThan(0);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pydantic Validation - Bad ID Type",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/getSingleProduct?id=abc",
+          "host": ["{{base_url}}"],
+          "path": ["getSingleProduct"],
+          "query": [{ "key": "id", "value": "abc" }]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 422 for invalid type', function () {",
+              "    pm.response.to.have.status(422);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pydantic Validation - Missing Fields on addNew",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"id\": 1, \"name\": \"Incomplete\"}"
+        },
+        "url": {
+          "raw": "{{base_url}}/addNew",
+          "host": ["{{base_url}}"],
+          "path": ["addNew"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 422 for missing fields', function () {",
+              "    pm.response.to.have.status(422);",
+              "});"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
