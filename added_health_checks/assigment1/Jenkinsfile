@@ -14,7 +14,7 @@ pipeline {
         // build the docker image
         stage('Build Docker Image') {
             steps {
-                dir('pipeline_testing/assigment1') {
+                dir('added_health_checks/assigment1') {
                     sh "docker build -t ${DOCKER_IMAGE} ."
                 }
             }
@@ -34,10 +34,17 @@ pipeline {
             }
         }
 
+        // verify the docker healthcheck reports healthy
+        stage('Verify Container Health') {
+            steps {
+                sh "docker inspect --format='{{.State.Health.Status}}' ${CONTAINER_NAME}"
+            }
+        }
+
         // run the postman checks
         stage('Run Newman Tests') {
             steps {
-                dir('pipeline_testing/assigment1') {
+                dir('added_health_checks/assigment1') {
                     sh 'newman run postman/inventory_api.postman_collection.json --env-var "base_url=http://localhost:8000"'
                 }
             }
@@ -61,7 +68,7 @@ pipeline {
         // write the README
         stage('Generate README') {
             steps {
-                dir('pipeline_testing/assigment1') {
+                dir('added_health_checks/assigment1') {
                     sh '''
                         cat > README.txt << 'READMEEOF'
 Inventory API - Endpoint Reference
@@ -124,7 +131,7 @@ READMEEOF
         // zip up source code and docker config
         stage('Create Archive') {
             steps {
-                dir('pipeline_testing/assigment1') {
+                dir('added_health_checks/assigment1') {
                     sh '''
                         TIMESTAMP=$(date +"%Y%m%d-%H%M%S")
                         zip -r "complete-${TIMESTAMP}.zip" \
@@ -147,7 +154,7 @@ READMEEOF
             sh 'docker rm inventory-api-container || true'
         }
         success {
-            dir('pipeline_testing/assigment1') {
+            dir('added_health_checks/assigment1') {
                 archiveArtifacts artifacts: 'complete-*.zip', fingerprint: true
                 archiveArtifacts artifacts: 'README.txt', fingerprint: true
             }
