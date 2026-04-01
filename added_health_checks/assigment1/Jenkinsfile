@@ -1,0 +1,156 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_IMAGE = 'inventory-api'
+        CONTAINER_NAME = 'inventory-api-container'
+        MONGO_URI = credentials('MONGO_URI')
+        EXCHANGE_RATE_API_KEY = credentials('EXCHANGE_RATE_API_KEY')
+        PATH = "/usr/local/bin:${env.PATH}"
+    }
+
+    stages {
+
+        // build the docker image
+        stage('Build Docker Image') {
+            steps {
+                dir('pipeline_testing/assigment1') {
+                    sh "docker build -t ${DOCKER_IMAGE} ."
+                }
+            }
+        }
+
+        // start the container in the background
+        stage('Run Container') {
+            steps {
+                sh """
+                    docker run -d --name ${CONTAINER_NAME} \
+                        -e MONGO_URI="${MONGO_URI}" \
+                        -e EXCHANGE_RATE_API_KEY="${EXCHANGE_RATE_API_KEY}" \
+                        -p 8000:8000 \
+                        ${DOCKER_IMAGE}
+                """
+                sh 'sleep 10'
+            }
+        }
+
+        // run the postman checks
+        stage('Run Newman Tests') {
+            steps {
+                dir('pipeline_testing/assigment1') {
+                    sh 'newman run postman/inventory_api.postman_collection.json --env-var "base_url=http://localhost:8000"'
+                }
+            }
+        }
+
+        // run the python tests inside the container
+        stage('Run Python Tests') {
+            steps {
+                sh "docker exec ${CONTAINER_NAME} python3 -m pytest tests/ -v"
+            }
+        }
+
+        // stop the container
+        stage('Cleanup Container') {
+            steps {
+                sh "docker stop ${CONTAINER_NAME}"
+                sh "docker rm ${CONTAINER_NAME}"
+            }
+        }
+
+        // write the README
+        stage('Generate README') {
+            steps {
+                dir('pipeline_testing/assigment1') {
+                    sh '''
+                        cat > README.txt << 'READMEEOF'
+Inventory API - Endpoint Reference
+===================================
+
+Base URL: http://localhost:8000
+
+Endpoints:
+
+1. GET /getSingleProduct
+   Parameters: id (int, required) - the product ID to look up
+   Example: /getSingleProduct?id=1001
+
+2. GET /getAll
+   Parameters: none
+   Returns all products in the database
+
+3. POST /addNew
+   Body (JSON):
+     - id (int, required) - unique product ID
+     - name (string, required) - product name
+     - price (float, required) - price in USD
+     - quantity (int, required) - stock quantity
+     - description (string, required) - product description
+
+4. DELETE /deleteOne
+   Parameters: id (int, required) - the product ID to delete
+   Example: /deleteOne?id=1001
+
+5. GET /startsWith
+   Parameters: letter (string, 1 char, required) - filter products by first letter
+   Example: /startsWith?letter=N
+
+6. GET /paginate
+   Parameters:
+     - start (int, required) - product ID to start from
+     - end (int, required) - product ID to end at
+   Returns up to 10 products in the given ID range
+   Example: /paginate?start=1001&end=1010
+
+7. GET /convert
+   Parameters: id (int, required) - product ID to convert price for
+   Returns the price converted from USD to EUR using live exchange rates
+   Example: /convert?id=1001
+
+8. GET /metrics
+   Prometheus monitoring endpoint showing request counts and response times
+
+Interactive API Documentation:
+  Swagger UI: http://localhost:8000/docs
+  ReDoc: http://localhost:8000/redoc
+
+Built with FastAPI, MongoDB, and Prometheus monitoring.
+READMEEOF
+                    '''
+                }
+            }
+        }
+
+        // zip up source code and docker config
+        stage('Create Archive') {
+            steps {
+                dir('pipeline_testing/assigment1') {
+                    sh '''
+                        TIMESTAMP=$(date +"%Y%m%d-%H%M%S")
+                        zip -r "complete-${TIMESTAMP}.zip" \
+                            app/ \
+                            tests/ \
+                            postman/ \
+                            Dockerfile \
+                            Jenkinsfile \
+                            requirements.txt \
+                            README.txt
+                    '''
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            sh 'docker stop inventory-api-container || true'
+            sh 'docker rm inventory-api-container || true'
+        }
+        success {
+            dir('pipeline_testing/assigment1') {
+                archiveArtifacts artifacts: 'complete-*.zip', fingerprint: true
+                archiveArtifacts artifacts: 'README.txt', fingerprint: true
+            }
+        }
+    }
+}
