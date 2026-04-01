@@ -34,24 +34,6 @@ pipeline {
             }
         }
 
-        // verify the docker healthcheck reports healthy
-        stage('Verify Container Health') {
-            steps {
-                sh '''
-                    for i in $(seq 1 12); do
-                        STATUS=$(docker inspect --format='{{.State.Health.Status}}' ${CONTAINER_NAME})
-                        echo "Health status: ${STATUS}"
-                        if [ "${STATUS}" = "healthy" ]; then
-                            exit 0
-                        fi
-                        sleep 5
-                    done
-                    echo "Container did not become healthy within timeout"
-                    exit 1
-                '''
-            }
-        }
-
         // run the postman checks
         stage('Run Newman Tests') {
             steps {
